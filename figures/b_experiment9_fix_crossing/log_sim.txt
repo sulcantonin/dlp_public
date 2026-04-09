@@ -1,0 +1,39 @@
+API key found (_vBlOpvd...)
+Connecting to IBM Quantum...
+  !! HW connection failed: 'Unable to retrieve instances. Please check that you are using a valid API token.'
+
+=================================================================
+CROSSING (8 cycles) on aer_simulator
+  A: good→bad, B: bad→good, cross ~cycle 4
+  DLP Softmax Router: L = 1 - Σ p_i·F_i
+=================================================================
+
+Cyc Sel   fid_A   fid_B     DLP  Static  Greedy   p(A)   p(B)     Loss    λ_A    λ_B
+------------------------------------------------------------------------------------------
+  0   A     0.984   0.546    0.984   0.979   0.984  0.982  0.018   0.0235  2.000 -2.000
+  1   A     0.980   0.660    0.980   0.981   0.982  0.982  0.018   0.0253  2.000 -2.000
+  2   A     0.979   0.826    0.979   0.978   0.981  0.982  0.018   0.0242  2.000 -2.000
+  3   A     0.856   0.915    0.856   0.854   0.923  0.982  0.018   0.1425  2.000 -2.000
+  4   A     0.684   0.979    0.684   0.692   0.974  0.958  0.042   0.3040  1.565 -1.565
+  5   B     0.502   0.982    0.982   0.497   0.987  0.018  0.982   0.0262 -2.000  2.000
+  6   B     0.382   0.982    0.982   0.392   0.986  0.018  0.982   0.0289 -2.000  2.000
+  7   B     0.345   0.988    0.988   0.341   0.980  0.018  0.982   0.0238 -2.000  2.000
+
+=================================================================
+RESULTS: Crossing (sim) (aer_simulator)
+=================================================================
+  Static (always A): 0.7142
+  Round-robin:       0.8223
+  DLP Adaptive:      0.9294  (32768 shots)
+  Greedy oracle:     0.9745
+  DLP vs static:     +21.5 pp
+  DLP vs greedy:     -4.5 pp
+  Final logits:      λ_A=-2.0000, λ_B=2.0000
+  Final probs:       p(A)=0.0180, p(B)=0.9820
+  Path choices:      ['A', 'A', 'A', 'A', 'A', 'B', 'B', 'B']
+  Circuits saved:    12 files in figures/b_experiment9_fix_crossing/circuits/
+  Time: 2s
+=================================================================
+
+DONE — 4s (0.1 min)
+All outputs in: figures/b_experiment9_fix_crossing/

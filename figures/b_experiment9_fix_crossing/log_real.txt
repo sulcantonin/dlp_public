@@ -1,0 +1,89 @@
+API key found (vBlOpvdV...)
+Connecting to IBM Quantum...
+Backend: ibm_fez (156 qubits)
+Status:  operational
+Queue:   3 pending jobs
+
+=================================================================
+CROSSING (8 cycles) on ibm_fez
+  A: good→bad, B: bad→good, cross ~cycle 4
+  DLP Softmax Router: L = 1 - Σ p_i·F_i
+=================================================================
+
+Cyc Sel   fid_A   fid_B     DLP  Static  Greedy   p(A)   p(B)     Loss    λ_A    λ_B
+------------------------------------------------------------------------------------------
+    Job d7b9nau5nvhs... done
+    Job d7b9om30g7hs... done
+    Job d7b9osm5nvhs... done
+    Job d7b9p4b0g7hs... done
+    Job d7b9pdh5a5qc... done
+    Job d7b9pmjklj2c... done
+  0   A     0.934   0.545    0.934   0.916   0.910  0.982  0.018   0.0734  2.000 -2.000
+    Job d7b9puj0g7hs... done
+    Job d7b9q0j0g7hs... done
+    Job d7b9q7r0g7hs... done
+    Job d7b9qcj0g7hs... done
+    Job d7b9qir0g7hs... done
+    Job d7b9qprklj2c... done
+  1   A     0.916   0.645    0.916   0.936   0.904  0.982  0.018   0.0889  2.000 -2.000
+    Job d7b9r2p5a5qc... done
+    Job d7b9rdm5nvhs... done
+    Job d7b9ri15a5qc... done
+    Job d7b9rprklj2c... done
+    Job d7b9s2j0g7hs... done
+    Job d7b9s9h5a5qc... done
+  2   A     0.910   0.809    0.910   0.896   0.887  0.982  0.018   0.0917  2.000 -2.000
+    Job d7b9sgjklj2c... done
+    Job d7b9sij0g7hs... done
+    Job d7b9sqh5a5qc... done
+    Job d7b9t1b0g7hs... done
+    Job d7b9t8rklj2c... done
+    Job d7b9tge5nvhs... done
+  3   A     0.787   0.924    0.787   0.760   0.904  0.982  0.018   0.2104  1.995 -1.995
+    Job d7b9tnh5a5qc... done
+    Job d7b9tpj0g7hs... done
+    Job d7b9u23klj2c... done
+    Job d7b9ud3klj2c... done
+    Job d7b9ufu5nvhs... done
+    Job d7b9uorklj2c... done
+  4   A     0.602   0.963    0.602   0.547   0.957  0.867  0.133   0.3502  0.936 -0.936
+    Job d7b9v0rklj2c... done
+    Job d7b9v2m5nvhs... done
+    Job d7b9v9r0g7hs... done
+    Job d7b9vh3klj2c... done
+    Job d7b9vip5a5qc... done
+    Job d7b9vqm5nvhs... done
+  5   B     0.438   0.955    0.955   0.404   0.949  0.018  0.982   0.0542 -2.000  2.000
+    Job d7ba01rklj2c... done
+    Job d7ba09j0g7hs... done
+    Job d7ba0gp5a5qc... done
+    Job d7ba0j30g7hs... done
+    Job d7ba0rp5a5qc... done
+    Job d7ba15b0g7hs... done
+  6   B     0.367   0.951    0.951   0.332   0.959  0.018  0.982   0.0593 -2.000  2.000
+    Job d7ba1c3klj2c... done
+    Job d7ba1jh5a5qc... done
+    Job d7ba1qjklj2c... done
+    Job d7ba1t3klj2c... done
+    Job d7ba23bklj2c... done
+    Job d7ba253klj2c... done
+  7   B     0.268   0.945    0.945   0.273   0.977  0.018  0.982   0.0669 -2.000  2.000
+
+=================================================================
+RESULTS: Crossing (hw) (ibm_fez)
+=================================================================
+  Static (always A): 0.6331
+  Round-robin:       0.7732
+  DLP Adaptive:      0.8750  (8192 shots)
+  Greedy oracle:     0.9309
+  DLP vs static:     +24.2 pp
+  DLP vs greedy:     -5.6 pp
+  Final logits:      λ_A=-2.0000, λ_B=2.0000
+  Final probs:       p(A)=0.0180, p(B)=0.9820
+  Path choices:      ['A', 'A', 'A', 'A', 'A', 'B', 'B', 'B']
+  Circuits saved:    12 files in figures/b_experiment9_fix_crossing/circuits/
+  Time: 1455s
+=================================================================
+
+DONE — 1470s (24.5 min)
+All outputs in: figures/b_experiment9_fix_crossing/

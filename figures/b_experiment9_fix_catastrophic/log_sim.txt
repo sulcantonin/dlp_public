@@ -1,0 +1,73 @@
+API key found (_vBlOpvd...)
+Connecting to IBM Quantum...
+  !! HW connection failed: 'Unable to retrieve instances. Please check that you are using a valid API token.'
+
+=================================================================
+CATASTROPHIC FAILURE (unbiased) on aer_simulator
+  Phase 1: Router learns preferred path organically
+  Phase 2: Catastrophic Rx noise on HW-preferred path
+  DLP Softmax Router: L = 1 - Σ p_i·F_i
+=================================================================
+
+  === CALIBRATION (5 samples, 2048 shots each) ===
+    Cal 1/5: Path A = 0.9907
+    Cal 1/5: Path B = 0.9868
+    Cal 2/5: Path A = 0.9893
+    Cal 2/5: Path B = 0.9839
+    Cal 3/5: Path A = 0.9868
+    Cal 3/5: Path B = 0.9883
+    Cal 4/5: Path A = 0.9878
+    Cal 4/5: Path B = 0.9854
+    Cal 5/5: Path A = 0.9893
+    Cal 5/5: Path B = 0.9893
+
+  Path A: 0.9888 ± 0.0013
+  Path B: 0.9867 ± 0.0019
+  Δ = 0.0021
+  → HW prefers Path A; failure targets it
+  → Survivor: Path B
+
+  Noise: cycles 0–4 clean; cycles 5–9: 1.2 rad on Path A
+
+Cyc Sel   fid_A   fid_B     DLP  Static  Greedy   p(A)   p(B)     Loss    λ_A    λ_B  Phase
+-----------------------------------------------------------------------------------------------
+  0   B     0.985   0.992    0.992   0.985   0.992  0.002  0.998   0.0083 -3.000  3.000  NORMAL
+  1   B     0.988   0.990    0.990   0.983   0.990  0.002  0.998   0.0098 -3.000  3.000  NORMAL
+  2   B     0.984   0.988    0.988   0.986   0.988  0.002  0.998   0.0122 -3.000  3.000  NORMAL
+  3   B     0.989   0.986    0.986   0.988   0.989  0.002  0.998   0.0137 -3.000  3.000  NORMAL
+  4   B     0.986   0.992    0.992   0.987   0.992  0.002  0.998   0.0083 -3.000  3.000  NORMAL
+  5   B     0.354   0.986    0.986   0.357   0.986  0.002  0.998   0.0152 -3.000  3.000  FAILURE
+  6   B     0.333   0.984    0.984   0.333   0.984  0.002  0.998   0.0172 -3.000  3.000  FAILURE
+  7   B     0.342   0.989    0.989   0.325   0.989  0.002  0.998   0.0123 -3.000  3.000  FAILURE
+  8   B     0.342   0.988    0.988   0.338   0.988  0.002  0.998   0.0133 -3.000  3.000  FAILURE
+  9   B     0.341   0.986    0.986   0.351   0.986  0.002  0.998   0.0153 -3.000  3.000  FAILURE
+
+=================================================================
+RESULTS: Catastrophic Failure (aer_simulator)
+=================================================================
+  HW-preferred:  Path A (cal: A=0.9888, B=0.9867)
+  Failure:       cycle 5+ on Path A
+
+  --- PRE-FAILURE (cycles 0–4) ---
+  DLP:    0.9896
+  Static: 0.9859
+  Paths:  ['B', 'B', 'B', 'B', 'B']
+
+  --- POST-FAILURE (cycles 5–9) ---
+  DLP:    0.9869
+  Static: 0.3406
+  Paths:  ['B', 'B', 'B', 'B', 'B']
+  Δ:      +64.6 pp
+
+  --- OVERALL ---
+  DLP:    0.9882
+  Static: 0.6633
+  Greedy: 0.9885
+  DLP vs static: +32.5 pp
+  Final logits:  λ_A=-3.0000, λ_B=3.0000
+  Circuits:      16 files in figures/b_experiment9_fix_catastrophic/circuits/
+  Time:          2s
+=================================================================
+
+DONE — 4s (0.1 min)
+All outputs in: figures/b_experiment9_fix_catastrophic/

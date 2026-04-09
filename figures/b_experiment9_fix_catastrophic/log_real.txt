@@ -1,0 +1,125 @@
+API key found (vBlOpvdV...)
+Connecting to IBM Quantum...
+Backend: ibm_fez (156 qubits)
+Status:  operational
+Queue:   0 pending jobs
+
+=================================================================
+CATASTROPHIC FAILURE (unbiased) on ibm_fez
+  Phase 1: Router learns preferred path organically
+  Phase 2: Catastrophic Rx noise on HW-preferred path
+  DLP Softmax Router: L = 1 - Σ p_i·F_i
+=================================================================
+
+  === CALIBRATION (5 samples, 512 shots each) ===
+    Job d7b9g030g7hs... done
+    Cal 1/5: Path A = 0.9531
+    Job d7b9g1p5a5qc... done
+    Cal 1/5: Path B = 0.9766
+    Job d7b9g3m5nvhs... done
+    Cal 2/5: Path A = 0.9336
+    Job d7b9g5bklj2c... done
+    Cal 2/5: Path B = 0.9707
+    Job d7b9g765nvhs... done
+    Cal 3/5: Path A = 0.9141
+    Job d7b9g8rklj2c... done
+    Cal 3/5: Path B = 0.9805
+    Job d7b9gau5nvhs... done
+    Cal 4/5: Path A = 0.9102
+    Job d7b9gch5a5qc... done
+    Cal 4/5: Path B = 0.9668
+    Job d7b9ge30g7hs... done
+    Cal 5/5: Path A = 0.9023
+    Job d7b9gfrklj2c... done
+    Cal 5/5: Path B = 0.9805
+
+  Path A: 0.9227 ± 0.0184
+  Path B: 0.9750 ± 0.0054
+  Δ = 0.0523
+  → HW prefers Path B; failure targets it
+  → Survivor: Path A
+
+  Noise: cycles 0–4 clean; cycles 5–9: 1.2 rad on Path B
+
+Cyc Sel   fid_A   fid_B     DLP  Static  Greedy   p(A)   p(B)     Loss    λ_A    λ_B  Phase
+-----------------------------------------------------------------------------------------------
+    Job d7b9ghm5nvhs... done
+    Job d7b9gje5nvhs... done
+    Job d7b9gl65nvhs... done
+    Job d7b9gmjklj2c... done
+  0   B     0.900   0.979    0.979   0.969   0.979  0.002  0.998   0.0217 -3.000  3.000  NORMAL
+    Job d7b9go30g7hs... done
+    Job d7b9gpr0g7hs... done
+    Job d7b9grm5nvhs... done
+    Job d7b9gtbklj2c... done
+  1   B     0.914   0.967    0.967   0.961   0.967  0.002  0.998   0.0333 -3.000  3.000  NORMAL
+    Job d7b9gv65nvhs... done
+    Job d7b9h0r0g7hs... done
+    Job d7b9h2h5a5qc... done
+    Job d7b9h4bklj2c... done
+  2   B     0.926   0.973    0.973   0.967   0.973  0.002  0.998   0.0275 -3.000  3.000  NORMAL
+    Job d7b9h63klj2c... done
+    Job d7b9h7u5nvhs... done
+    Job d7b9h9m5nvhs... done
+    Job d7b9hb95a5qc... done
+  3   B     0.926   0.965    0.965   0.961   0.965  0.002  0.998   0.0353 -3.000  3.000  NORMAL
+    Job d7b9hd95a5qc... done
+    Job d7b9hf3klj2c... done
+    Job d7b9hh15a5qc... done
+    Job d7b9hip5a5qc... done
+  4   B     0.938   0.971    0.971   0.969   0.971  0.002  0.998   0.0294 -3.000  3.000  NORMAL
+    Job d7b9hkj0g7hs... done
+    Job d7b9hmh5a5qc... done
+    Job d7b9hojklj2c... done
+    Job d7b9hqu5nvhs... done
+  5   B     0.953   0.336    0.336   0.332   0.953  0.031  0.969   0.6450 -1.723  1.723  FAILURE
+    Job d7b9hte5nvhs... done
+    Job d7b9hvj0g7hs... done
+    Job d7b9i1h5a5qc... done
+    Job d7b9i8rklj2c... done
+  6   A     0.908   0.361    0.908   0.324   0.908  0.998  0.002   0.0931  3.000 -3.000  FAILURE
+    Job d7b9jam5nvhs... done
+    Job d7b9jch5a5qc... done
+    Job d7b9jeb0g7hs... done
+    Job d7b9jge5nvhs... done
+  7   A     0.930   0.340    0.930   0.355   0.930  0.998  0.002   0.0718  3.000 -3.000  FAILURE
+    Job d7b9jip5a5qc... done
+    Job d7b9jku5nvhs... done
+    Job d7b9jmu5nvhs... done
+    Job d7b9jom5nvhs... done
+  8   A     0.936   0.355    0.936   0.357   0.936  0.998  0.002   0.0659  3.000 -3.000  FAILURE
+    Job d7b9jqm5nvhs... done
+    Job d7b9jse5nvhs... done
+    Job d7b9ju15a5qc... done
+    Job d7b9k4m5nvhs... done
+  9   A     0.928   0.385    0.928   0.332   0.928  0.998  0.002   0.0736  3.000 -3.000  FAILURE
+
+=================================================================
+RESULTS: Catastrophic Failure (ibm_fez)
+=================================================================
+  HW-preferred:  Path B (cal: A=0.9227, B=0.9750)
+  Failure:       cycle 5+ on Path B
+
+  --- PRE-FAILURE (cycles 0–4) ---
+  DLP:    0.9707
+  Static: 0.9652
+  Paths:  ['B', 'B', 'B', 'B', 'B']
+
+  --- POST-FAILURE (cycles 5–9) ---
+  DLP:    0.8074
+  Static: 0.3402
+  Paths:  ['B', 'A', 'A', 'A', 'A']
+  Δ:      +46.7 pp
+
+  --- OVERALL ---
+  DLP:    0.8891
+  Static: 0.6527
+  Greedy: 0.9508
+  DLP vs static: +23.6 pp
+  Final logits:  λ_A=3.0000, λ_B=-3.0000
+  Circuits:      16 files in figures/b_experiment9_fix_catastrophic/circuits/
+  Time:          491s
+=================================================================
+
+DONE — 567s (9.5 min)
+All outputs in: figures/b_experiment9_fix_catastrophic/
